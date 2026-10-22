@@ -49,7 +49,7 @@ def hello_world():
             if user["uuid"] == id:
                 abort(422, "User already added")
         
-        fdata.append({"uuid": id, "username": username})
+        fdata.append({"uuid": id, "name": username})
         file.seek(0)
         json.dump(fdata, file, indent=2)
         file.truncate()
